@@ -1,0 +1,39 @@
+<script>
+    function initMap() {  
+        var loc_center = { lat: {{{latCenter}}} , lng: {{{lngCenter}}}  };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: loc_center
+        });
+
+        var image  = "https://chart.googleapis.com/chart?chst=d_map_xpin_icon&chld=pin_star|home|136B21|BEF914"
+        var marker = new google.maps.Marker({
+                    position: loc_center,
+                    map: map, 
+                    title: "Center",  
+                    icon: image                  
+        });
+
+        var quakes = {{{c}}};
+
+
+        console.log("This is how many earthquakes I have recorded: ");
+                
+        quakes.forEach( function(quake){
+            console.log(quake);
+
+                var marker = new google.maps.Marker({
+                    position: quake,
+                    map: map, 
+                    title: "Location: " + quake.place + "\nMagnitude: " + quake.mag
+                });
+
+                console.log("Quake: ", quake)
+        });  
+
+    };
+
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1H9pDYO0PXcWhUUiO4ttt788SI0jr73U&callback=initMap">
+</script>

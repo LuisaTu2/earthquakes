@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <meta charset="UTF-8">
+    <title>EarthQuakes Maps</title>  
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script type="application/javascript" src="http://localhost:8080/js/mustache.js" ></script>  
+    <script type="application/javascript" src="js/client.js" ></script>   
+    <script type="application/javascript" src="js/vue.js"></script>
+    {{!-- <script type="application/javascript" src="js/map.js" ></script>   --}}
+    {{!-- THE TYPE HAS TO BE LISTED FIRST--}}
+   
+</head>
+<body>
+    <h3 id="pageTitle" class="pageTitle">EarthQuakes Interactive Demo</h3>
+    <div id="map" >
+        <script>
+            function initMap() {                 
+                // Setting initial map position to SF <3 
+                var loc_center = { lat: 37.7749, lng: -122.4194 }; 
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 5,
+                    center: loc_center
+                });
+
+               
+                var marker = new google.maps.Marker({
+                            position: loc_center,
+                            map: map, 
+                });
+            };
+
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1H9pDYO0PXcWhUUiO4ttt788SI0jr73U&callback=initMap">
+        </script>
+
+    </div>
+    
+    <div id="dataSection">
+        <div id="dataDisplayWrapper" class= "dataDisplayWrapper">
+
+            <div id="dataDisplayLeft" class="dataDisplay">
+                <h3 class="dataDisplayTitle">Earthquakes Search Inputs </h3>                       
+                <form id="form">  
+                    <div class="leftForm">
+                        <label id="addressWrapper">
+                            <p class="dataText" > Enter address: </p>  <input type="text" name="address" id="address"  placeholder="Enter address">           
+                            {{!-- <input type="reset" value="Reset">  --}}
+                        </label>  {{!-- end of addressWrapper --}}
+
+                        <label id="dateRangeWrapper">
+                            <p class="dataText" > Date range: </p>  
+                            <input type="date" id="startDate" value="startDate" name="starttime"> 
+                            <input type="date" id="endDate" value="endDate" name="endtime">    
+                    </label>
+                    </div>
+
+                    <div class="rightForm">
+                        <label id="maxRadWrapper">
+                            <p class="dataText">Radius of Observation (km) </p>         
+                            <input type="range" id="range" min="0" max="1000" value="500" list="tickmarks" name="maxradiuskm">
+                            <datalist id="tickmarks" >
+                                <option value="0" label="0">
+                                <option value="500" label="500">
+                                <option value="1000" label="1000">
+                            </datalist>
+                        </label>   {{!-- end of maxRadWrapper --}}      
+            
+                        <label id="quakeMagWrapper">
+                            <p class="dataText">  Select Minimum Magnitude:  </p>
+                            <select name="minmagnitude" id="minMag">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </label>    {{!-- end of quakeMagWrapper --}}
+                    </div>
+                </form>          
+            </div>   {{!-- end of dataDisplayLeft --}}
+
+            <div id="dataDisplayRight">
+            </div>
+            
+        </div>  {{!-- end of dataDisplayWrapper --}}
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+

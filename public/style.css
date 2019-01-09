@@ -1,0 +1,99 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 99%;  
+    padding: 0;
+    margin: 0%;
+   
+}
+
+body{
+    margin: 0% 0.2%;
+    background-color:	rgba(98, 110, 96, 10%);
+}
+
+#pageTitle {
+    padding: 0% 0% 0% 40%; 
+    height: 2%;
+    color: #3c3c3c;
+    }
+
+.dataDisplayTitle{
+    color:rgb(5, 49, 5); 
+}
+
+label {
+    display: block;
+    margin: 2%;
+    height: 50%;
+}
+
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 55%;
+    width: 80%;
+    margin: 0% 10%;
+    
+}
+
+#dataSection{
+    width: 100%;
+    height: 35%;
+    color:rgb(5, 49, 5); 
+}
+
+#dataDisplayWrapper {
+    width: 78%;
+    margin: 1% 0% 1% 10%;
+    height: 100%;   
+}
+
+#dataDisplayLeft {   
+    float: left;
+    padding: 0% 0% 0% 3%;
+    height: 100%;
+    width: 47%;
+    background-color:rgba(129, 175, 129, 0.5);
+}
+
+#dataDisplayRight{
+    float: left;
+    width: 47%;
+    height: 100%;
+    padding-left: 3%;
+    background-color:rgba(152, 214, 152, 0.5);
+}
+
+.leftForm {
+    width: 50%;
+    float: left;
+}
+
+.rightForm{
+    width:50%;
+    float: left;
+}
+
+
+
+#addressWrapper{
+    height: 50%;
+    width: 100%;
+    float: left;
+}
+
+
+.dataText {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Earthy Colors Palette:
+
+Terracotta:     #945d60  rgb(148,93,96)
+Herb:           #626e62  rgb(98,110,98)
+Chilli:         #aaf73c  rgb(175,71,60)
+Charcoal:       #3c3c3c  rbg(60,60,60)
+*/
