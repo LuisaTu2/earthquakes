@@ -1,5 +1,5 @@
 const request = require('request');
-var gKey = "AIzaSyA1H9pDYO0PXcWhUUiO4ttt788SI0jr73U";
+var gKey = ;
 
 exports.geocodeAddress = function(address, callback) {
         var encodedAddress = encodeURIComponent(address);
