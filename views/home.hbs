@@ -5,12 +5,10 @@
     <title>EarthQuakes Maps</title>  
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script type="application/javascript" src="http://localhost:8080/js/mustache.js" ></script>  
+     <script type="application/javascript" src="http://localhost:8080/js/mustache.js" ></script>  
     <script type="application/javascript" src="js/client.js" ></script>   
-    <script type="application/javascript" src="js/vue.js"></script>
     {{!-- <script type="application/javascript" src="js/map.js" ></script>   --}}
-    {{!-- THE TYPE HAS TO BE LISTED FIRST--}}
+    {{!-- TYPE MUST BE LISTED FIRST--}}
    
 </head>
 <body>
@@ -34,7 +32,7 @@
 
         </script>
         <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1H9pDYO0PXcWhUUiO4ttt788SI0jr73U&callback=initMap">
         </script>
 
     </div>
@@ -43,20 +41,18 @@
         <div id="dataDisplayWrapper" class= "dataDisplayWrapper">
             <div id="dataDisplayLeft" class="dataDisplay">
                 <h3 class="dataDisplayTitle">Earthquakes Search Inputs </h3>                       
-                {{!-- <form id="form">   --}}
-                    {{!-- <div class="leftForm"> --}}
+
                         <label id="addressWrapper" class="dataInput">
                             <p class="dataText" > Enter address: </p>  
                             <input type="text" name="address" id="address"  placeholder="Enter address">           
                         </label>  {{!-- end of addressWrapper --}}
+
                         <label id="dateRangeWrapper" class="dataInput">
                             <p class="dataText" > Date range: </p>  
                             <input type="date" id="startDate" value="startDate" name="starttime"> 
                             <input type="date" id="endDate" value="endDate" name="endtime">    
                         </label>
-                    {{!-- </div> --}}
 
-                    {{!-- <div class="rightForm"> --}}
                         <label id="maxRadWrapper" class="dataInput">
                             <p class="dataText">Radius of Observation (0-1000 km) </p>         
                             <input type="range" id="range" min="0" max="1000" value="500" list="tickmarks" name="maxradiuskm">
@@ -81,8 +77,7 @@
                                 <option value="9">9</option>
                             </select>
                         </label>    {{!-- end of quakeMagWrapper --}}
-                    {{!-- </div> --}}
-                {{!-- </form>           --}}
+
             </div>   {{!-- end of dataDisplayLeft --}}
 
             <div id="dataDisplayRight">
