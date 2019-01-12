@@ -5,3 +5,4 @@ package.json
 node_modules*
 key.json
 serverBackup
+gKey.PNG
