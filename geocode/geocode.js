@@ -1,11 +1,11 @@
 const request = require('request');
-var gKey = "AIzaSyA1H9pDYO0PXcWhUUiO4ttt788SI0jr73U";
+const gKey  = require("./key.json");
 
 exports.geocodeAddress = function(address, callback) {
         var encodedAddress = encodeURIComponent(address);
-      
+       
         request({
-                url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${gKey}`      
+                url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${gKey.geoKey}`      
                 //json: true
                 }, function(error, res, body) {
                         body = JSON.parse(body);
@@ -45,10 +45,3 @@ exports.geocodeAddress = function(address, callback) {
 
 
 // OLD or ADDITIONAL CODE
-
-// request({
-//   url: "https://api.darksky.net/forecast/a13b6939a978bfb3d0bf837f14f44932/37.8267,-122.4233",
-//   json: true
-// }, () => , (error, response, body) => {
-//   console.log(body.currently.temperature);
-// });

@@ -41,26 +41,24 @@
     
     <div id="dataSection">
         <div id="dataDisplayWrapper" class= "dataDisplayWrapper">
-
             <div id="dataDisplayLeft" class="dataDisplay">
                 <h3 class="dataDisplayTitle">Earthquakes Search Inputs </h3>                       
-                <form id="form">  
-                    <div class="leftForm">
-                        <label id="addressWrapper">
-                            <p class="dataText" > Enter address: </p>  <input type="text" name="address" id="address"  placeholder="Enter address">           
-                            {{!-- <input type="reset" value="Reset">  --}}
+                {{!-- <form id="form">   --}}
+                    {{!-- <div class="leftForm"> --}}
+                        <label id="addressWrapper" class="dataInput">
+                            <p class="dataText" > Enter address: </p>  
+                            <input type="text" name="address" id="address"  placeholder="Enter address">           
                         </label>  {{!-- end of addressWrapper --}}
-
-                        <label id="dateRangeWrapper">
+                        <label id="dateRangeWrapper" class="dataInput">
                             <p class="dataText" > Date range: </p>  
                             <input type="date" id="startDate" value="startDate" name="starttime"> 
                             <input type="date" id="endDate" value="endDate" name="endtime">    
-                    </label>
-                    </div>
+                        </label>
+                    {{!-- </div> --}}
 
-                    <div class="rightForm">
-                        <label id="maxRadWrapper">
-                            <p class="dataText">Radius of Observation (km) </p>         
+                    {{!-- <div class="rightForm"> --}}
+                        <label id="maxRadWrapper" class="dataInput">
+                            <p class="dataText">Radius of Observation (0-1000 km) </p>         
                             <input type="range" id="range" min="0" max="1000" value="500" list="tickmarks" name="maxradiuskm">
                             <datalist id="tickmarks" >
                                 <option value="0" label="0">
@@ -68,8 +66,8 @@
                                 <option value="1000" label="1000">
                             </datalist>
                         </label>   {{!-- end of maxRadWrapper --}}      
-            
-                        <label id="quakeMagWrapper">
+
+                        <label id="quakeMagWrapper" class="dataInput">
                             <p class="dataText">  Select Minimum Magnitude:  </p>
                             <select name="minmagnitude" id="minMag">
                                 <option value="1">1</option>
@@ -83,8 +81,8 @@
                                 <option value="9">9</option>
                             </select>
                         </label>    {{!-- end of quakeMagWrapper --}}
-                    </div>
-                </form>          
+                    {{!-- </div> --}}
+                {{!-- </form>           --}}
             </div>   {{!-- end of dataDisplayLeft --}}
 
             <div id="dataDisplayRight">
@@ -93,13 +91,7 @@
         </div>  {{!-- end of dataDisplayWrapper --}}
 
     </div>
-
-
-
-
-
 </body>
-
 </html>
 
 
