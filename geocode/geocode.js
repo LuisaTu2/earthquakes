@@ -1,11 +1,11 @@
 const request = require('request');
-const gKey  = require("./key.json");
+const gKey  = "";
 
 exports.geocodeAddress = function(address, callback) {
         var encodedAddress = encodeURIComponent(address);
        
         request({
-                url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${gKey.geoKey}`      
+                url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${gKey}`      
                 //json: true
                 }, function(error, res, body) {
                         body = JSON.parse(body);
