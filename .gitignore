@@ -1,5 +1,5 @@
 # Folders
 archive*
-node_modules*
 key.json
 serverBackup
+node_modules*
