@@ -21,4 +21,4 @@ time of observation ranges from June 1, 2018 to Feb 25, 2019.
 
 <br>
 
-![EarthQuakes - Map Display](/screenshots/screenshot_LA_details.png)
+![EarthQuakes - Search Details](/screenshots/screenshot_LA_details.png)
