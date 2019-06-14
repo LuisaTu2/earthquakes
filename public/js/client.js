@@ -65,6 +65,7 @@ function ajaxCall(){
 
                 // Get the map script template 
                 $.get("/templates/map.html", function(mapHTML){
+                    console.log("Getting the map: ")
                     mapTmpl = mapHTML;
                     if(data.c == "") {
                         //console.log(data.c);

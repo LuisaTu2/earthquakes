@@ -60,7 +60,8 @@ app.post("/data", function(req, res){
             if(err2){
                 console.log("Incorrect URL: " + err2.message);
             } else {       
-                //var coords = (getQuakesCoords(body)         
+                //var coords = (getQuakesCoords(body)     
+                console.log("quakes: ", body);
                 getQuakesCoords(body, function(c){
                     res.json({c:c, latCenter:latCenter, lngCenter: lngCenter});
                 }); 
