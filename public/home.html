@@ -7,47 +7,46 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h3 id="pageTitle" class="pageTitle">EarthQuakes Interactive Demo</h3>
-    <div id="map" >
-        <script>
-            function initMap() {                 
-                // Setting initial map position to SF <3 
-                var loc_center = { lat: 37.7749, lng: -122.4194 }; 
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 5,
-                    center: loc_center
-                });
-
-               
-                var marker = new google.maps.Marker({
-                            position: loc_center,
-                            map: map, 
-                });
-            };
-
-        </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoKUQoxuJYwJ6eMIq8Gn33cf-LalCl7GA&callback=initMap">
-        </script>
-
-    </div>
+    <!-- <div id="container"> -->
+        <div id="pageTitle">EarthQuakes Interactive Demo</div>
+        <div id="map">
+            <script>
+                function initMap() {                 
+                    // Setting initial map position to SF <3 
+                    var loc_center = { lat: 37.7749, lng: -122.4194 }; 
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 5,
+                        center: loc_center
+                    });
+                    
+                    var marker = new google.maps.Marker({
+                                position: loc_center,
+                                map: map, 
+                    });
+                };
     
-    <div id="dataSection">
+            </script>
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoKUQoxuJYwJ6eMIq8Gn33cf-LalCl7GA&callback=initMap">
+            </script>
+        </div> 
+        <!-- end of map div -->
+        
+    
         <div id="dataDisplayWrapper" class= "dataDisplayWrapper">
             <div id="dataDisplayLeft" class="dataDisplay">
-                <h3 class="dataDisplayTitle">Earthquakes Search Inputs </h3>                       
-
+                <div id="dataDisplayTitle">Earthquakes Search Inputs </div>                       
                         <label id="addressWrapper" class="dataInput">
                             <p class="dataText" > Enter address: </p>  
                             <input type="text" name="address" id="address"  placeholder="Enter address">           
                         </label>  
-
+    
                         <label id="dateRangeWrapper" class="dataInput">
                             <p class="dataText" > Date range: </p>  
                             <input type="date" id="startDate" value="startDate" name="starttime"> 
                             <input type="date" id="endDate" value="endDate" name="endtime">    
                         </label>
-
+    
                         <label id="maxRadWrapper" class="dataInput">
                             <p class="dataText">Radius of Observation (0-1000 km) </p>         
                             <input type="range" id="range" min="0" max="1000" value="500" list="tickmarks" name="maxradiuskm">
@@ -57,7 +56,7 @@
                                 <option value="1000" label="1000">
                             </datalist>
                         </label>  
-
+    
                         <label id="quakeMagWrapper" class="dataInput">
                             <p class="dataText">  Select Minimum Magnitude:  </p>
                             <select name="minmagnitude" id="minMag">
@@ -72,15 +71,19 @@
                                 <option value="9">9</option>
                             </select>
                         </label>   
-
             </div>   
-
+    
             <div id="dataDisplayRight">
             </div>
-            
-        </div>  
+        </div>
+    
+        <div id = "footer">
+            Crafted by LuisaTu2
+        </div>
 
-    </div>
+    <!-- </div>  -->
+    <!-- end of div container -->
+         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="application/javascript" src="../js/mustache.js" ></script>  
     <script type="application/javascript" src="../js/client.js" ></script> 
