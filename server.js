@@ -6,39 +6,34 @@
 // *********************************************************************** //
 const request = require("request");
 const express = require("express");
-const hbs = require("hbs");
+const path = require('path');
 const geocode = require('./geocode/geocode.js');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const port =  process.env.PORT || 8080;
 
 // *********************************************************************** //
 // Location Info
 // *********************************************************************** //
-var locationRect = ["minlatitude", "minlongitude", "maxlatitude", "maxlongitude"];
-var locationCircle = ["latitude", "longitude", "maxradius", "maxradiuskm"];
+const locationRect = ["minlatitude", "minlongitude", "maxlatitude", "maxlongitude"];
+const locationCircle = ["latitude", "longitude", "maxradius", "maxradiuskm"];
 
 // *********************************************************************** //
 // Creating the server
 // *********************************************************************** //
-var app = express();
-app.use(express.static("public"));
-app.set("view engine", "hbs"); // 
+const app = express();
+app.use( express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 
 // *********************************************************************** //
 // Routing
 // *********************************************************************** //
-app.get("/", function(req, res){
-    console.log("You requested: " + req.url);
-    res.render("home.hbs");
-});
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/home.html')));
 
 app.post("/data", function(req, res){
     console.log("You requested: " + req.url);
     var data = req.body;
     console.log(data);
-    //earthQuakes(jsonData, res);
     
     var userAddress = data.address; 
     var startTime = data.starttime;
