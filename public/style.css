@@ -122,9 +122,9 @@ label {
     #pageTitle {
         /* margin: 2% 0% 0% 10%;  */
         font-family: 'Montserrat', sans-serif;
-        padding: 2% 0% 0% 12%;
+        padding: 2% 0% 0% 15%;
         height: 4%;
-        width: 80%;
+        width: 78%;
         /* color: #3c3c3c; */
         color: rgb(3, 78, 3);   
         font-weight: bold;     
@@ -214,7 +214,7 @@ label {
         font-family: 'Crimson Text', serif;
     }
 
-    input, #address{
+    input, #address, a{
         padding: 0%;
         margin: 0%;
         color: #9e9c9c;
@@ -261,15 +261,18 @@ label {
 
     #footer{
         height: 2%;
-        /* width: 100%; */
+        width: 98%;
         float: left;
         margin: 0%;
-        padding: 0%;
+        /* padding: 0%; */
+        padding-top: 1%;
+        padding-left: 2%;
         background-color: rgb(17, 85, 46);
         color: rgb(192, 211, 200);
         font-size: 0.8em;
         text-align: left;
-        padding: 1% 10% 0.6% 60.5%;
+        /* padding: 1% 10% 0.6% 52%; */
+        /* padding: 0%; */
     }
     
 }
