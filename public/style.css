@@ -4,7 +4,7 @@ html, body, container {
     padding: 0;
     margin: 0%; 
     min-width: 360px; 
-    max-height: 640;
+    min-height: 640px;
 }
 /* 
 body{
@@ -122,11 +122,14 @@ label {
     #pageTitle {
         /* margin: 2% 0% 0% 10%;  */
         font-family: 'Montserrat', sans-serif;
-        padding: 0%;
-        height: 5%;
-        width: 100%;
-        color: #3c3c3c;
+        padding: 2% 0% 0% 12%;
+        height: 4%;
+        width: 80%;
+        /* color: #3c3c3c; */
+        color: rgb(3, 78, 3);   
+        font-weight: bold;     
         font-size: 1em; 
+        margin: 0%;
     }
    
     /* Always set the map height explicitly to define the size of the div
