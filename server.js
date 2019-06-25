@@ -21,7 +21,7 @@ var locationCircle = ["latitude", "longitude", "maxradius", "maxradiuskm"];
 // *********************************************************************** //
 var app = express();
 app.use(express.static("public"));
-//app.set("view engine", "hbs"); // 
+app.set("view engine", "hbs"); // 
 app.use(bodyParser.json());
 
 
