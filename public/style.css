@@ -22,6 +22,7 @@ body{
     padding: 0% 0% 0% 40%; 
     height: 2%;
     color: #3c3c3c;
+    font-family: 'Montserrat', sans-serif;    
 }
 
 .dataDisplayTitle{
@@ -79,6 +80,7 @@ label {
     margin: 0;
     padding: 0;
     /* font-weight: bold; */
+    font-family: 'Crimson Text', serif;
 }
 
 #addressWrapper{
@@ -119,6 +121,7 @@ label {
 
     #pageTitle {
         /* margin: 2% 0% 0% 10%;  */
+        font-family: 'Montserrat', sans-serif;
         padding: 0%;
         height: 5%;
         width: 100%;
@@ -138,7 +141,7 @@ label {
     
     #dataDisplayWrapper {
         width: 100%;
-        height: 35%;
+        height: 37%;
         margin: 0%; 
         padding: 0%;
         /* background-color: blueviolet; */
@@ -146,11 +149,7 @@ label {
     }
 
     #dataDisplayTitle{
-        color: rgb(5, 49, 5); 
-        margin: 0%;
-        padding: 0%;
-        height: 10%;
-        width: 100%;
+        display: none;
     }
     
     label {
@@ -165,9 +164,37 @@ label {
         margin: 0%;
         height: 100%;
         width: 100%;
-        background-color:rgba(129, 175, 129, 0.5);
+        /* background-color:rgba(129, 175, 129, 0.5); */
+        background-color: rgba(11, 116, 11, 0.5);
     }
     
+
+    #dataDisplayLeftTable{
+        float: left;
+        padding: 0%;
+        margin: 0%;
+        height: 100%;
+        width: 100%;
+        /* background-color: tomato;  */
+    }
+
+    #tableRow{
+        height: 20%;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #dataTextDescr{
+        margin: 0%;
+        padding: 0%;
+        width: 33%;
+        font-size: 1.1em;
+        padding-left: 2%;
+        color: rgb(232, 243, 241);
+        /* font-weight: bold; */
+    }
+
     #dataDisplayRight{
         /* float: left;
         width: 47%;
@@ -181,6 +208,13 @@ label {
         margin: 0%;
         padding: 0%;
         /* font-weight: bold; */
+        font-family: 'Crimson Text', serif;
+    }
+
+    input, #address{
+        padding: 0%;
+        margin: 0%;
+        color: #9e9c9c;
     }
     
     #addressWrapper{
@@ -223,14 +257,16 @@ label {
     }
 
     #footer{
-        height: 5%;
-        width: 100%;
+        height: 2%;
+        /* width: 100%; */
         float: left;
         margin: 0%;
         padding: 0%;
-        background-color: rgb(40, 179, 98);
-        font-size: 1em;
-
+        background-color: rgb(17, 85, 46);
+        color: rgb(192, 211, 200);
+        font-size: 0.8em;
+        text-align: left;
+        padding: 1% 10% 0.6% 60.5%;
     }
     
 }
