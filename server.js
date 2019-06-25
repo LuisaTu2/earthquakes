@@ -9,6 +9,7 @@ const express = require("express");
 const hbs = require("hbs");
 const geocode = require('./geocode/geocode.js');
 var bodyParser = require('body-parser');
+const port =  process.env.PORT || 8080;
 
 // *********************************************************************** //
 // Location Info
@@ -111,7 +112,7 @@ function getQuakesCoords(jsonBody, callback){
 // Server Listening
 // *********************************************************************** //
 
-    app.listen(8080, () => {
+    app.listen(port, () => {
         console.log("Server is up on port 8080.");
     });
 
