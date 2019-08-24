@@ -14,8 +14,8 @@
 A sample map display along with the search details is displayed below.
 
 <br>
-Map rendering magnitude 4 and higher earthquakes with epicenter Los Angeles. Search radius is set to 500km and the 
-time of observation ranges from June 1, 2018 to Feb 25, 2019. 
+Map rendering magnitude 4 and higher earthquakes with epicenter San Francisco. Search radius is set to 500km and the 
+time of observation ranges from June 03, 2019 to August 24, 2019. 
 
 ![EarthQuakes - Map Display](/screenshots/screenshot.JPG)
 
