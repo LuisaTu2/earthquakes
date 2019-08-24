@@ -3,3 +3,6 @@ archive*
 key.json
 serverBackup
 node_modules*
+.ebextension
+EQ.zip
+
