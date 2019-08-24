@@ -17,7 +17,7 @@ A sample map display along with the search details is displayed below.
 Map rendering magnitude 4 and higher earthquakes with epicenter Los Angeles. Search radius is set to 500km and the 
 time of observation ranges from June 1, 2018 to Feb 25, 2019. 
 
-![EarthQuakes - Map Display](/screenshots/screenshot.png)
+![EarthQuakes - Map Display](/screenshots/screenshot.JPG)
 
 <!-- ![EarthQuakes - Map Display](/screenshots/screenshot_LA.png)
 
